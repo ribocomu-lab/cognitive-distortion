@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>진단 결과 | 인지 왜곡 진단 테스트</title>
+  <meta name="description" content="나의 인지 왜곡 진단 테스트 결과">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <main class="result-shell" id="main-content">
+    <!-- 잘못된 쿼리 안내 -->
+    <section class="card summary-hero" id="invalid-state" hidden aria-labelledby="invalid-title">
+      <h1 class="section-heading" id="invalid-title"></h1>
+      <p class="body-copy" id="invalid-body"></p>
+      <div class="result-actions" style="justify-content:center;">
+        <a class="btn btn-primary" href="./index.html" id="invalid-retry-btn"></a>
+      </div>
+    </section>
+
+    <!-- 정상 결과 -->
+    <div id="valid-result" hidden>
+      <!-- 1. 종합 점수 요약 -->
+      <section class="card summary-hero" aria-labelledby="total-score-heading">
+        <h1 class="summary-label" id="total-score-heading"></h1>
+        <div class="summary-score-row">
+          <span class="summary-score-num" id="total-score-value">0</span>
+          <span class="summary-score-max" id="total-score-max">/ 120</span>
+        </div>
+        <div class="summary-meter" aria-hidden="true">
+          <div class="summary-meter-fill" id="total-meter-fill"></div>
+        </div>
+        <div>
+          <span class="level-pill" id="total-level-badge"></span>
+        </div>
+        <p class="summary-message" id="total-level-msg"></p>
+      </section>
+
+      <!-- 2. 눈여겨볼 생각 습관 (상위 1~3개, 7점 이상) -->
+      <section class="section-gap" aria-labelledby="top-types-heading">
+        <h2 class="section-heading" id="top-types-heading"></h2>
+        <div class="top-cards" id="top-types-container"></div>
+      </section>
+
+      <!-- 3. 10가지 유형 전체 보기 (차트 + 통합 리스트) -->
+      <section class="card section-gap" aria-labelledby="overview-heading">
+        <h2 class="section-heading" id="overview-heading"></h2>
+        <p class="section-caption" id="overview-subheading"></p>
+        <div class="radar-wrap" id="radar-wrap">
+          <canvas id="radar-canvas" role="img" aria-label="10가지 인지 왜곡 유형별 점수 차트"></canvas>
+        </div>
+        <div class="type-accordion-list" id="overview-list"></div>
+      </section>
+
+      <!-- 4. 액션 버튼 및 한 줄 유의사항 -->
+      <div class="result-actions">
+        <a class="btn btn-primary" href="./index.html" id="action-retry"></a>
+        <button type="button" class="btn btn-secondary" id="action-copy"></button>
+        <button type="button" class="btn btn-secondary" id="action-share" hidden></button>
+      </div>
+      <p class="toast-msg" id="toast-feedback" role="status" aria-live="polite" hidden></p>
+
+      <p class="quiet-footnote" id="result-footnote"></p>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/result.js"></script>
+</body>
+</html>

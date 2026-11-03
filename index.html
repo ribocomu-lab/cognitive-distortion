@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인지 왜곡 진단 테스트 | 10가지 생각 습관 점검</title>
+  <meta name="description" content="30개 일상 문항으로 살펴보는 나의 10가지 생각 습관 자가진단">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:title" content="인지 왜곡 진단 테스트">
+  <meta property="og:description" content="30개 일상 문항으로 살펴보는 나의 10가지 생각 습관">
+  <meta property="og:image" content="./assets/og-placeholder.svg">
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <main class="test-shell" id="main-content">
+    <header class="test-header">
+      <h1 class="test-title" id="test-title"></h1>
+      <p class="test-guide" id="test-guide"></p>
+    </header>
+
+    <div class="progress-wrap">
+      <div class="progress-row">
+        <div class="progress-track" role="progressbar" id="progress-bar" aria-valuemin="1" aria-valuemax="30" aria-valuenow="1" aria-label="문항 진행 상태">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <span class="progress-count" id="progress-count" aria-live="polite">1 / 30</span>
+      </div>
+    </div>
+
+    <form id="test-form" novalidate>
+      <section class="question-stage" aria-live="polite">
+        <fieldset class="question-fieldset">
+          <legend class="question-legend">
+            <span class="question-num" id="question-num">01</span>
+            <span class="question-text" id="question-text"></span>
+          </legend>
+          <div class="scale-group">
+            <div class="scale-options" id="scale-options"></div>
+            <div class="scale-poles" aria-hidden="true">
+              <span id="pole-left"></span>
+              <span id="pole-right"></span>
+            </div>
+          </div>
+        </fieldset>
+      </section>
+
+      <p class="inline-hint" id="inline-hint" role="status" hidden></p>
+
+      <div class="step-controls">
+        <button type="button" class="btn btn-ghost" id="prev-btn"></button>
+        <button type="button" class="btn btn-secondary" id="next-btn"></button>
+        <button type="submit" class="btn btn-primary" id="submit-btn" hidden></button>
+      </div>
+    </form>
+
+    <p class="quiet-footnote" id="quiet-footnote"></p>
+  </main>
+
+  <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/test.js"></script>
+</body>
+</html>

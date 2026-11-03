@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f5f4f0"/>
+  <rect x="60" y="60" width="1080" height="510" rx="28" fill="#ffffff" stroke="#dedbd3" stroke-width="3"/>
+  <rect x="110" y="130" width="170" height="44" rx="22" fill="#e6f1f4"/>
+  <text x="195" y="159" text-anchor="middle" font-family="Pretendard, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#1b5c6e">자가이해 도구</text>
+  <text x="110" y="265" font-family="Pretendard, -apple-system, sans-serif" font-size="64" font-weight="800" fill="#1a2428">인지 왜곡 진단 테스트</text>
+  <text x="110" y="340" font-family="Pretendard, -apple-system, sans-serif" font-size="32" font-weight="500" fill="#435258">30개 일상 문항으로 살펴보는 나의 10가지 생각 습관</text>
+  <text x="110" y="470" font-family="Pretendard, -apple-system, sans-serif" font-size="24" font-weight="600" fill="#5d6d74">비로그인 · 기기 내 즉시 계산 · CBT 기반 실천 팁</text>
+</svg>
